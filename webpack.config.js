@@ -26,7 +26,7 @@ module.exports = {
 	module: { rules: [] },
 	plugins: [
 		new MiniCssExtractPlugin({ filename: "[name].css" }),
-		new WorkerPlugin()
+		new WorkerPlugin({globalObject: "self"})
 	],
 };
 
